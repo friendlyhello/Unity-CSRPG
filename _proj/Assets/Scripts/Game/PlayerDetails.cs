@@ -9,7 +9,7 @@ using UnityEngine;
 public class PlayerDetails : MonoBehaviour
 {
     // Reference to Game Session class
-    [SerializeField] private GameSession gameSession;
+    //[SerializeField] private GameSession gameSession;
     
     // Player details text fields
     [SerializeField] private TMP_Text playerName;
@@ -18,7 +18,14 @@ public class PlayerDetails : MonoBehaviour
     [SerializeField] private TMP_Text gold;
     [SerializeField] private TMP_Text experiencePoints;
     [SerializeField] private TMP_Text playerLevel;
+
+    // Cache reference to GameSession class
+    private GameSession gameSession;  
     
+    private void Awake()
+    {
+        gameSession = GetComponent<GameSession>();
+    }
 
     private void Start()
     {
