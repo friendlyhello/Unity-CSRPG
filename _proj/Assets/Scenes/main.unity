@@ -676,6 +676,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &681398137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 681398138}
+  m_Layer: 0
+  m_Name: '> Test Divider [Editor Only]'
+  m_TagString: EditorOnly
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &681398138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681398137}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 860.5, y: 620.38794, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &701335277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1546,7 +1576,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -627, y: -16}
+  m_AnchoredPosition: {x: -627, y: -28.075}
   m_SizeDelta: {x: 256.3455, y: 56.1509}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1271244777
@@ -1655,7 +1685,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b47a16f43e294df7bc68885e54de878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: {fileID: 1901430271}
+  characterClass: {fileID: 1608917388}
+  hitPoints: {fileID: 418878957}
+  gold: {fileID: 701335279}
   experiencePoints: {fileID: 767419489}
+  level: {fileID: 1754640927}
 --- !u!1 &1332379742
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,19 +28,19 @@ MonoBehaviour:
   separator:
     enabled: 1
     startString: '>'
-    color: {r: 0, g: 1, b: 1, a: 0.15}
+    color: {r: 0.5801887, g: 0.8107309, b: 1, a: 0.15}
   tree:
     enabled: 1
     drawOverlayOnColoredPrefabs: 1
-    dividerHeigth: 1
+    dividerHeigth: 0.5
     baseLevelColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     branches:
-    - overlayColor: {r: 1, g: 0.44, b: 0.97, a: 0.04}
+    - overlayColor: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 0.019607844}
       colors:
-      - {r: 1, g: 0.44, b: 0.97, a: 1}
-      - {r: 0.56, g: 0.44, b: 1, a: 1}
-      - {r: 0.44, g: 0.71, b: 1, a: 1}
-      - {r: 0.19, g: 0.53, b: 0.78, a: 1}
+      - {r: 0.43921566, g: 0.7356767, b: 1, a: 1}
+      - {r: 0.45772517, g: 0.52015656, b: 0.6981132, a: 1}
+      - {r: 0.3494126, g: 0.38705346, b: 0.49056602, a: 1}
+      - {r: 0.26508543, g: 0.28747773, b: 0.3490566, a: 1}
     - overlayColor: {r: 0.93, g: 1, b: 0.42, a: 0.04}
       colors:
       - {r: 0.93, g: 1, b: 0.42, a: 1}
