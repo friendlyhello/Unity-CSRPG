@@ -6,20 +6,29 @@ namespace Models
 {
     public class Player 
     {
-        private int m_ExperiencePoints;
+        // Property backing fields
+        private int _experiencePoints;
 
-        // Properties
+        // Player properties
         public string Name { get; set; }
         public string CharacterClass { get; set; }
         public int HitPoints { get; set; }
         public int Gold { get; set; }
 
+        //** Testing a button that adds +10 XP on button press */
         public int ExperiencePoints
         {
-            get => m_ExperiencePoints;
-            set => m_ExperiencePoints = value;
+            get { return _experiencePoints; }
+            set
+            {
+                _experiencePoints = value;
+                // OnPropertyChanged("ExperiencePoints");
+            }
+            // Make the event work here?
         }
 
         public int Level { get; set; }
     }
+    
+    // 
 }
