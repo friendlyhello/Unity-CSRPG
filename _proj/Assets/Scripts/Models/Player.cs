@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Models
 {
@@ -22,13 +25,25 @@ namespace Models
             set
             {
                 _experiencePoints = value;
-                // OnPropertyChanged("ExperiencePoints");
+                
+                // Trigger the event (function)
+                PropertyChanged("ExperiencePoints");
             }
-            // Make the event work here?
         }
-
         public int Level { get; set; }
+        
+        /// <summary>
+        /// Event for when Player Properties change
+        /// </summary>
+        
+        // Event publisher
+        public event EventHandler OnPropertyChanged;
+        
+        // Function that receives triggered event
+        private void PropertyChanged(string propertyName)
+        {
+            OnPropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            Debug.Log("Experience Points property changed!");
+        }
     }
-    
-    // 
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Models;
@@ -9,12 +10,16 @@ namespace ViewModels
     {
         // Player property
         public Player CurrentPlayer { get; set; }
-
+        
         // Constructor
         public GameSession()
         {
             // Create player object
             CurrentPlayer = new Player();
+
+            // (!) Unity complains about CurrentPlayer = new Player();
+            // Rider suggests using:
+            // CurrentPlayer = gameObject.AddComponent<Player>(); ???
 
             // Current player variables
             CurrentPlayer.Name = "Celes";
@@ -28,5 +33,7 @@ namespace ViewModels
 
             // Current location variables
         }
+        
+        // Subscribe to event publisher
     }
 }
