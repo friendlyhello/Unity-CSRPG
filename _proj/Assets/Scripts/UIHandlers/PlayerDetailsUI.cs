@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using ViewModels;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class PlayerUI : MonoBehaviour
+public class PlayerDetailsUI : MonoBehaviour
+
 {
     // Reference to Game Session class
     private GameSession _GameSession;
@@ -51,9 +53,9 @@ public class PlayerUI : MonoBehaviour
         level.text = "Level: " + m_level;
     }
 
-    //** Add +10 XP test button function */
-    public void AddExperience()
-    {
-        m_experience += 10;
-    }
+    // //** Add +10 XP test button function */
+    // public void AddExperience()
+    // {
+    //     m_experience += 10;
+    // }
 }

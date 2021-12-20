@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Models;
+using TMPro;
 using UnityEngine;
 
 namespace ViewModels
@@ -10,6 +11,9 @@ namespace ViewModels
     {
         // Player property
         public Player CurrentPlayer { get; set; }
+        
+        // Location property
+        public Location CurrentLocation { get; set; }
         
         // Constructor
         public GameSession()
@@ -30,8 +34,14 @@ namespace ViewModels
             CurrentPlayer.Level = 1;
 
             // Create location object
+            CurrentLocation = new Location();
 
             // Current location variables
+            CurrentLocation.Name = "Home";
+            CurrentLocation.XCoordinate = 0;
+            CurrentLocation.YCoordinate = -1;
+            CurrentLocation.Description = "This is your house.";
+            // CurrentLocation.ImageName = 
         }
         
         // Subscribe to event publisher

@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Location : MonoBehaviour
+namespace Models
 {
-    // Start is called before the first frame update
-    void Start()
+    public class Location
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        // Location Properties
+        public int XCoordinate { get; set; }
+        public int YCoordinate { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string ImageName { get; set; }
         
     }
 }
