@@ -10,10 +10,9 @@ namespace ViewModels
 {
     public class GameSession : MonoBehaviour
     {
-        // Player property
+        // Class properties
+        public World CurrentWorld { get; set; }
         public Player CurrentPlayer { get; set; }
-        
-        // Location property
         public Location CurrentLocation { get; set; }
         
         // Constructor
