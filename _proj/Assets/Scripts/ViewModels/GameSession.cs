@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Models;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ViewModels
 {
@@ -41,9 +42,9 @@ namespace ViewModels
             CurrentLocation.XCoordinate = 0;
             CurrentLocation.YCoordinate = -1;
             CurrentLocation.Description = "This is your house.";
-            // CurrentLocation.ImageName = 
+            
+            // TODO: Ignoring this for now. Not sure if I should use Addressables...
+            CurrentLocation.ImageName = "Home.png";
         }
-        
-        // Subscribe to event publisher
     }
 }
