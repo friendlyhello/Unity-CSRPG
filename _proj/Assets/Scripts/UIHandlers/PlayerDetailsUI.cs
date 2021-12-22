@@ -21,14 +21,6 @@ public class PlayerDetailsUI : MonoBehaviour
     [SerializeField] private TMP_Text experiencePoints;
     [SerializeField] private TMP_Text level;
 
-    // Text instance fields
-    private string m_playerName;
-    private string m_characterClass;
-    private int m_hitPoints;
-    private int m_gold;
-    private int m_experience;
-    private int m_level;
-
     private void Start()
     {
         // Cache the Game Session class
@@ -49,5 +41,6 @@ public class PlayerDetailsUI : MonoBehaviour
     public void AddExperience()
     {
         _GameSession.CurrentPlayer.ExperiencePoints += 10;
+        // OnPropertyChanged(experiencePoints);
     }
 }
