@@ -13,7 +13,7 @@ namespace Models
         public string Name { get; set; }
         public string Description { get; set; }
         
-        // TODO: Not sure how if I should use Addressables for setting location images...
+        // TODO: Not sure how to set location images on button press...
         public string ImageName { get; set; }
         
     }

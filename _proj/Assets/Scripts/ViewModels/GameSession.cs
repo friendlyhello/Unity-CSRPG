@@ -42,7 +42,7 @@ namespace ViewModels
             CurrentLocation.YCoordinate = -1;
             CurrentLocation.Description = "This is your house.";
             
-            // TODO: Ignoring this for now. Not sure if I should use Addressables...
+            // TODO: Ignoring this for now...
             CurrentLocation.ImageName = "Home.png";
         }
     }

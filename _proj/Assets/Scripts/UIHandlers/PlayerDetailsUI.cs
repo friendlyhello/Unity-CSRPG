@@ -33,29 +33,21 @@ public class PlayerDetailsUI : MonoBehaviour
     {
         // Cache the Game Session class
         _GameSession = FindObjectOfType<GameSession>();
-        
-        // Instance fields
-        m_playerName = _GameSession.CurrentPlayer.Name;
-        m_characterClass = _GameSession.CurrentPlayer.CharacterClass;
-        m_hitPoints = _GameSession.CurrentPlayer.HitPoints;
-        m_gold = _GameSession.CurrentPlayer.Gold;
-        m_experience = _GameSession.CurrentPlayer.ExperiencePoints;
-        m_level = _GameSession.CurrentPlayer.Level;
     }
 
     private void Update()
     {
-        playerName.text = "Name: " + m_playerName;
-        characterClass.text = "Character Class: " + m_characterClass;
-        hitPoints.text = "Hit points: " + m_hitPoints;
-        gold.text = "Gold: " + m_gold;
-        experiencePoints.text = "Experience Points: " + m_experience;
-        level.text = "Level: " + m_level;
+        playerName.text = "Name: " + _GameSession.CurrentPlayer.Name;
+        characterClass.text = "Character Class: " + _GameSession.CurrentPlayer.CharacterClass;
+        hitPoints.text = "Hit points: " + _GameSession.CurrentPlayer.HitPoints;
+        gold.text = "Gold: " + _GameSession.CurrentPlayer.Gold;
+        experiencePoints.text = "Experience Points: " + _GameSession.CurrentPlayer.ExperiencePoints;
+        level.text = "Level: " + _GameSession.CurrentPlayer.Level;
     }
 
-    // //** Add +10 XP test button function */
-    // public void AddExperience()
-    // {
-    //     m_experience += 10;
-    // }
+    //** Add +10 XP test button function */
+    public void AddExperience()
+    {
+        _GameSession.CurrentPlayer.ExperiencePoints += 10;
+    }
 }
