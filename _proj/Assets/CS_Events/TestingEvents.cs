@@ -1,28 +1,37 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class TestingEvents : MonoBehaviour {
-
+public class TestingEvents : MonoBehaviour
+{
     public event EventHandler<OnSpacePressedEventArgs> OnSpacePressed;
     public class OnSpacePressedEventArgs : EventArgs {
-        public int spaceCount;
+        public int buttonPressCount;
     }
 
-    private int spaceCount;
+    private TestButton testButton;
+    
+    private int buttonPressCount;
 
-    private void Start() {
-
+    private void Start()
+    {
+        testButton = FindObjectOfType<TestButton>();
     }
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            // Space pressed!
-            spaceCount++;
-            OnSpacePressed?.Invoke(this, new OnSpacePressedEventArgs { spaceCount = spaceCount });
+        if (testButton.buttonPressed.Equals(true)){
+            // Button pressed!
+            buttonPressCount++;
+            OnSpacePressed?.Invoke(this, new OnSpacePressedEventArgs { buttonPressCount = buttonPressCount });
         }
     }
+    
+    // Put in if condition: buttonPressed.Equals(true)
 
+    // private void Update() {
+    //     if (Input.GetKeyDown(KeyCode.Space)) {
+    //         // Space pressed!
+    //         spaceCount++;
+    //         OnSpacePressed?.Invoke(this, new OnSpacePressedEventArgs { spaceCount = spaceCount });
+    //     }
+    // }
 }

@@ -11,6 +11,6 @@ public class TestingEventSubscriber : MonoBehaviour {
     }
 
     private void TestingEvents_OnSpacePressed(object sender, TestingEvents.OnSpacePressedEventArgs e) {
-        Debug.Log("Space! " + e.spaceCount);
+        Debug.Log("Space! " + e.buttonPressCount);
     }
 }

@@ -1,10 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using ViewModels;
 using TMPro;
-using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerDetailsUI : MonoBehaviour
@@ -37,10 +32,12 @@ public class PlayerDetailsUI : MonoBehaviour
         level.text = "Level: " + _GameSession.CurrentPlayer.Level;
     }
 
-    //** Add +10 XP test button function */
-    public void AddExperience()
-    {
-        _GameSession.CurrentPlayer.ExperiencePoints += 10;
-        // OnPropertyChanged(experiencePoints);
-    }
+    // //** Add +10 XP test button function */
+    // public void AddExperience()
+    // {
+    //     _GameSession.CurrentPlayer.ExperiencePoints += 10;
+    // }
+    
+    // Event Subscriber
+    
 }
