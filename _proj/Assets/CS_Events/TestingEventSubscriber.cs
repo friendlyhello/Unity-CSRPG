@@ -3,14 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TestingEventSubscriber : MonoBehaviour {
-
+public class TestingEventSubscriber : MonoBehaviour 
+{
     private void Start() {
         TestingEvents testingEvents = GetComponent<TestingEvents>();
-        testingEvents.OnSpacePressed += TestingEvents_OnSpacePressed;
+        testingEvents.OnButtonPressed += TestingEvents_OnButtonPressed;
     }
 
-    private void TestingEvents_OnSpacePressed(object sender, TestingEvents.OnSpacePressedEventArgs e) {
-        Debug.Log("Space! " + e.buttonPressCount);
+    private void TestingEvents_OnButtonPressed(object sender, TestingEvents.OnButtonPressedEventArgs e) {
+        Debug.Log("Button pressed! " + e.buttonPressCount);
     }
 }

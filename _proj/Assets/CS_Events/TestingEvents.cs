@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class TestingEvents : MonoBehaviour
 {
-    public event EventHandler<OnSpacePressedEventArgs> OnSpacePressed;
-    public class OnSpacePressedEventArgs : EventArgs {
+    public event EventHandler<OnButtonPressedEventArgs> OnButtonPressed;
+    public class OnButtonPressedEventArgs : EventArgs {
         public int buttonPressCount;
     }
 
@@ -21,17 +21,7 @@ public class TestingEvents : MonoBehaviour
         if (testButton.buttonPressed.Equals(true)){
             // Button pressed!
             buttonPressCount++;
-            OnSpacePressed?.Invoke(this, new OnSpacePressedEventArgs { buttonPressCount = buttonPressCount });
+            OnButtonPressed?.Invoke(this, new OnButtonPressedEventArgs { buttonPressCount = buttonPressCount });
         }
     }
-    
-    // Put in if condition: buttonPressed.Equals(true)
-
-    // private void Update() {
-    //     if (Input.GetKeyDown(KeyCode.Space)) {
-    //         // Space pressed!
-    //         spaceCount++;
-    //         OnSpacePressed?.Invoke(this, new OnSpacePressedEventArgs { spaceCount = spaceCount });
-    //     }
-    // }
 }
