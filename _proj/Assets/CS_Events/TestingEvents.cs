@@ -13,7 +13,7 @@ public class TestingEvents : MonoBehaviour
 
     private TestButton_02 testButton;
 
-    private int buttonPressCount;
+    private int buttonPressCount = 1;
 
     [SerializeField] private TMP_Text addXpText;
 
