@@ -5,33 +5,36 @@ using UnityEngine;
 public class TestingEvents : MonoBehaviour
 {
     public event EventHandler<OnButtonPressedEventArgs> OnButtonPressed;
-    public class OnButtonPressedEventArgs : EventArgs {
+
+    public class OnButtonPressedEventArgs : EventArgs
+    {
         public int buttonPressCount;
     }
 
     private TestButton_02 testButton;
-    
+
     private int buttonPressCount;
 
     [SerializeField] private TMP_Text addXpText;
 
-    private void Start()
+    private void Awake()
     {
         testButton = FindObjectOfType<TestButton_02>();
     }
 
-    private void Update() {
-        if (testButton.buttonPressed.Equals(true))
+    private void Update()
+    {
+        if (testButton.buttonPressed)
         {
             // Button pressed!
             addXpText.text = "XP: " + buttonPressCount++;
-            
-            buttonPressCount++;
-            OnButtonPressed?.Invoke(this, new OnButtonPressedEventArgs { buttonPressCount = buttonPressCount });
+
+            OnButtonPressed?.Invoke(this, new OnButtonPressedEventArgs {buttonPressCount = buttonPressCount});
         }
     }
-    
-    // Put in if condition: buttonPressed.Equals(true)
+}
+
+// Put in if condition: buttonPressed.Equals(true)
 
     // private void Update() {
     //     if (Input.GetKeyDown(KeyCode.Space)) {
@@ -40,4 +43,4 @@ public class TestingEvents : MonoBehaviour
     //         OnSpacePressed?.Invoke(this, new OnSpacePressedEventArgs { spaceCount = spaceCount });
     //     }
     // }
-}
+
