@@ -24,8 +24,9 @@ public class TestingEvents : MonoBehaviour
 
     private void Update()
     {
-        if (testButton.buttonPressed)
+        if (testButton.buttonPressed.Equals(true))
         {
+            testButton.buttonPressed = false;
             // Button pressed!
             addXpText.text = "XP: " + buttonPressCount++;
 
