@@ -26,8 +26,9 @@ public class TestingEvents : MonoBehaviour
     {
         if (testButton.buttonPressed.Equals(true))
         {
+            // Set buttonPressed back to false to only register one click!
             testButton.buttonPressed = false;
-            // Button pressed!
+            
             addXpText.text = "XP: " + buttonPressCount++;
 
             OnButtonPressed?.Invoke(this, new OnButtonPressedEventArgs {buttonPressCount = buttonPressCount});

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class TestButton_02 : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class TestButton_02 : MonoBehaviour, IPointerDownHandler//, IPointerUpHandler
 {
     [SerializeField] private Button testButton;
     
@@ -15,7 +15,8 @@ public class TestButton_02 : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
         buttonPressed = true;
     }
  
-    public void OnPointerUp(PointerEventData eventData){
-        buttonPressed = false;
-    }
+    // Don't need this any more, I don't think...
+    // public void OnPointerUp(PointerEventData eventData){
+    //     buttonPressed = false;
+    // }
 }
