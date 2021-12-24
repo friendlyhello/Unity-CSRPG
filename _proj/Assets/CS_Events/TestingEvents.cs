@@ -1,4 +1,5 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 
 public class TestingEvents : MonoBehaviour
@@ -8,20 +9,35 @@ public class TestingEvents : MonoBehaviour
         public int buttonPressCount;
     }
 
-    private TestButton testButton;
+    private TestButton_02 testButton;
     
     private int buttonPressCount;
 
+    [SerializeField] private TMP_Text addXpText;
+
     private void Start()
     {
-        testButton = FindObjectOfType<TestButton>();
+        testButton = FindObjectOfType<TestButton_02>();
     }
 
     private void Update() {
-        if (testButton.buttonPressed.Equals(true)){
+        if (testButton.buttonPressed.Equals(true))
+        {
             // Button pressed!
+            addXpText.text = "XP: " + buttonPressCount++;
+            
             buttonPressCount++;
             OnButtonPressed?.Invoke(this, new OnButtonPressedEventArgs { buttonPressCount = buttonPressCount });
         }
     }
+    
+    // Put in if condition: buttonPressed.Equals(true)
+
+    // private void Update() {
+    //     if (Input.GetKeyDown(KeyCode.Space)) {
+    //         // Space pressed!
+    //         spaceCount++;
+    //         OnSpacePressed?.Invoke(this, new OnSpacePressedEventArgs { spaceCount = spaceCount });
+    //     }
+    // }
 }
