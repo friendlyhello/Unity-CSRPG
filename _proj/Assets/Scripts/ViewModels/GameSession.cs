@@ -41,5 +41,17 @@ namespace ViewModels
             // TODO: Ignoring this for now...
             CurrentLocation.ImageName = "Home.png";
         }
+
+        private void Start()
+        {
+            PlayerDetailsUI playerEvent = FindObjectOfType<PlayerDetailsUI>();
+            // Event handler
+            playerEvent.OnButtonPressed += TestingEvents_OnButtonPressed;
+        }
+        
+        // Event handler method
+        private void TestingEvents_OnButtonPressed(object sender, PlayerDetailsUI.OnButtonPressedEventArgs e) {
+            Debug.Log("Button pressed! " + e.buttonPressCount);
+        }
     }
 }

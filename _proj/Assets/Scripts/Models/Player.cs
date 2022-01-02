@@ -21,7 +21,6 @@ namespace Models
             set
             {
                 _name = value;
-                PropertyChanged("Name");
             }
         }
 
@@ -31,7 +30,6 @@ namespace Models
             set
             {
                 _characterClass = value;
-                PropertyChanged("CharacterClass");
             }
         }
 
@@ -41,7 +39,6 @@ namespace Models
             set
             {
                 _hitPoints = value;
-                PropertyChanged("HitPoints");
             }
         }
 
@@ -51,7 +48,6 @@ namespace Models
             set
             {
                 _gold = value;
-                PropertyChanged("Gold");
             }
         }
 
@@ -66,7 +62,7 @@ namespace Models
                 _experiencePoints = value;
                 
                 // Trigger the event (function)
-                PropertyChanged("ExperiencePoints");
+                // PropertyChanged("ExperiencePoints");
             }
         }
 
@@ -76,22 +72,7 @@ namespace Models
             set
             {
                 _level = value;
-                PropertyChanged("Level");
             }
-        }
-        
-        /// <summary>
-        /// Event for when Player Properties change
-        /// </summary>
-        
-        // Event publisher
-        public event EventHandler OnPropertyChanged;
-        
-        // Function that receives triggered event
-        private void PropertyChanged(string propertyName)
-        {
-            OnPropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            Debug.Log("Property Changed Event Fired!");
         }
     }
 }
