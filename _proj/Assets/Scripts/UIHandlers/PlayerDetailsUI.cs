@@ -32,12 +32,6 @@ public class PlayerDetailsUI : MonoBehaviour
         level.text = "Level: " + _GameSession.CurrentPlayer.Level;
     }
 
-    // //** Add +10 XP test button function */
-    // public void AddExperience()
-    // {
-    //     _GameSession.CurrentPlayer.ExperiencePoints += 10;
-    // }
     
-    // Event Subscriber
     
 }

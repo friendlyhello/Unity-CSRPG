@@ -21,10 +21,6 @@ namespace ViewModels
             // Create player object
             CurrentPlayer = new Player();
 
-            // (!) Unity complains about CurrentPlayer = new Player();
-            // Rider suggests using:
-            // CurrentPlayer = gameObject.AddComponent<Player>(); ???
-
             // Current player variables
             CurrentPlayer.Name = "Celes";
             CurrentPlayer.CharacterClass = "Army General";

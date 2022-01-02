@@ -36,13 +36,3 @@ public class TestingEvents : MonoBehaviour
     }
 }
 
-// Put in if condition: buttonPressed.Equals(true)
-
-    // private void Update() {
-    //     if (Input.GetKeyDown(KeyCode.Space)) {
-    //         // Space pressed!
-    //         spaceCount++;
-    //         OnSpacePressed?.Invoke(this, new OnSpacePressedEventArgs { spaceCount = spaceCount });
-    //     }
-    // }
-
