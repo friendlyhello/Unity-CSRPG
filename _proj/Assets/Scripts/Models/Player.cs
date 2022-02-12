@@ -1,10 +1,12 @@
 using System;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Models
 {
-    public class Player 
+    public class Player : INotifyPropertyChanged
     {
         // Property backing fields
         private string _name;
@@ -73,6 +75,14 @@ namespace Models
             {
                 _level = value;
             }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
